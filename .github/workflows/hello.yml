@@ -24,3 +24,5 @@ jobs:
           pwd
           whoami
           uname -a
+      - name: List Files
+        run: ls -la
