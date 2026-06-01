@@ -1,4 +1,4 @@
-name: Understanding Steps
+name: Checkout Demo
 
 on:
   push:
@@ -7,22 +7,22 @@ on:
 
 jobs:
 
-  learning-job:
+  checkout-demo:
 
     runs-on: ubuntu-latest
 
     steps:
 
-      - name: Step 1
-        run: echo "I am Step 1"
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
 
-      - name: Step 2
-        run: echo "I am Step 2"
+      - name: Show Current Directory
+        run: pwd
 
-      - name: Step 3
-        run: |
-          pwd
-          whoami
-          uname -a
       - name: List Files
         run: ls -la
+
+      - name: Show Repository Content
+        run: |
+          echo "Repository Files:"
+          find .
