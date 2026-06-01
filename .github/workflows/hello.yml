@@ -1,4 +1,4 @@
-name: My First Workflow
+name: Understanding Steps
 
 on:
   push:
@@ -7,11 +7,20 @@ on:
 
 jobs:
 
-  hello:
+  learning-job:
 
     runs-on: ubuntu-latest
 
     steps:
 
-      - name: Print Message
-        run: echo "Hello GitHub Actions"
+      - name: Step 1
+        run: echo "I am Step 1"
+
+      - name: Step 2
+        run: echo "I am Step 2"
+
+      - name: Step 3
+        run: |
+          pwd
+          whoami
+          uname -a
